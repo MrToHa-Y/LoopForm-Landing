@@ -1,0 +1,11 @@
+.root {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 100lvh;
+  z-index: var(--layer-canvas);
+  pointer-events: none;
+
+  canvas {
+    pointer-events: none;
+  }
+}

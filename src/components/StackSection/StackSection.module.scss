@@ -1,0 +1,35 @@
+@use "@/styles/mixins";
+
+.section {
+  position: relative;
+  z-index: var(--stack-layer);
+  height: var(--stack-height);
+}
+
+.overlap {
+  margin-top: -100vh;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: clip;
+}
+
+@include mixins.reduced-motion {
+  .section {
+    height: auto;
+  }
+
+  .overlap {
+    margin-top: 0;
+  }
+
+  .sticky {
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+}
